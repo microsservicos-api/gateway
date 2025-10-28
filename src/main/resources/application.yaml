@@ -19,6 +19,8 @@ spring:
               uri: http://exchange:8080
               predicates:
                 - Path=/exchange/**
+              filters:
+                - StripPrefix=1
 
             - id: account
               uri: http://account:8080
@@ -34,6 +36,11 @@ spring:
               uri: http://product:8080
               predicates:
                 - Path=/product/**
+
+            - id: order
+              uri: http://order:8080
+              predicates:
+                - Path=/order/**
 
           globalcors:
             corsConfigurations:
