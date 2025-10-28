@@ -15,10 +15,10 @@ spring:
         webflux:
           routes:
 
-            - id: insper
-              uri: https://www.insper.edu.br
+            - id: exchange
+              uri: http://exchange:8080
               predicates:
-                - Path=/insper/**
+                - Path=/exchange/**
 
             - id: account
               uri: http://account:8080
