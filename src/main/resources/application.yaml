@@ -19,8 +19,6 @@ spring:
               uri: http://exchange:8080
               predicates:
                 - Path=/exchange/**
-              filters:
-                - StripPrefix=1
 
             - id: account
               uri: http://account:8080
